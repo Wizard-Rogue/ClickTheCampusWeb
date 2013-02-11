@@ -6,9 +6,14 @@ gem 'rails', '3.2.8'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem "therubyracer"
+gem "less-rails"
+gem "twitter-bootstrap-rails"
 gem 'devise'
 gem 'heroku'
+gem 'thin'
+gem 'paperclip'
+gem 'rails_admin'
 
 
 # Gems used only for assets and not required
