@@ -15,7 +15,7 @@ gem 'thin'
 gem 'paperclip'
 gem 'rails_admin'
 gem 'simple_form'
-
+gem 'cancan'
 
 # Gems used only for assets and not required
 # in production environments by default.

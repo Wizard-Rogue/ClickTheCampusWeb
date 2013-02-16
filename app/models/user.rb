@@ -8,4 +8,5 @@ class User < ActiveRecord::Base
 
   validates_presence_of     :password
   validates_confirmation_of :password
+  has_many :events, dependent: :destroy, foreign_key: "creator_id"
 end

@@ -6,8 +6,5 @@ ClickTheCampus::Application.routes.draw do
     get 'users/sign_in' => 'devise/sessions#new'
   end
 
-  # authenticated :user do
-  #   root to: 'events#index', as: 'events'
-  # end
-
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 end
