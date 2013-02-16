@@ -9,7 +9,6 @@
       <th><%= model_class.human_attribute_name(:name) %></th>
       <th><%= model_class.human_attribute_name(:date) %></th>
       <th><%= model_class.human_attribute_name(:time) %></th>
-      <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:external_link) %></th>
       <th>Creator</th>
       <th>Organization/Department</th>
@@ -21,9 +20,8 @@
       <tr>
         <td><%= link_to event.id, event_path(event) %></td>
         <td><%= event.name %></td>
-        <td><%= event.date %></td>
-        <td><%= event.time %></td>
-        <td><%= event.description %></td>
+        <td><%= event.date.strftime("%b %d, %Y") %></td>
+        <td><%= event.time.strftime("%l:%M %p") %></td>
         <td><%= event.external_link %></td>
         <td><%= event.creator.username %></td>
         <td><%= event.source %></td>

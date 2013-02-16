@@ -1,4 +1,6 @@
 ClickTheCampus::Application.routes.draw do
+  get "start/index"
+
   resources :events
 
   devise_for :users do
@@ -7,4 +9,6 @@ ClickTheCampus::Application.routes.draw do
   end
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  root to: 'start#index', as: :start_page
 end
