@@ -14,8 +14,8 @@
   <dd><%= @event.description %></dd>
   <dt><strong><%= model_class.human_attribute_name(:external_link) %>:</strong></dt>
   <dd><%= @event.external_link %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:creator_id) %>:</strong></dt>
-  <dd><%= @event.creator_id %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:creator) %>:</strong></dt>
+  <dd><%= @event.creator.username %></dd>
   <dt><strong><%= model_class.human_attribute_name(:source) %>:</strong></dt>
   <dd><%= @event.source %></dd>
 </dl>

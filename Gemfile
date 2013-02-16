@@ -14,6 +14,7 @@ gem 'heroku'
 gem 'thin'
 gem 'paperclip'
 gem 'rails_admin'
+gem 'simple_form'
 
 
 # Gems used only for assets and not required

@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  devise :database_authenticatable,
+  devise :database_authenticatable, :registerable,
          :rememberable, :trackable, :authentication_keys => [:username]
 
   attr_accessible :username, :password, :password_confirmation, :remember_me, :admin
