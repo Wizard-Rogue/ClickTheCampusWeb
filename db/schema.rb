@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130211204221) do
+ActiveRecord::Schema.define(:version => 20130216130214) do
 
   create_table "events", :force => true do |t|
     t.string   "name"
@@ -21,8 +21,9 @@ ActiveRecord::Schema.define(:version => 20130211204221) do
     t.string   "external_link"
     t.integer  "creator_id"
     t.string   "source"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
+    t.integer  "clicks",        :default => 0
   end
 
   add_index "events", ["creator_id"], :name => "index_events_on_creator_id"

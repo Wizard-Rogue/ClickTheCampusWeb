@@ -83,6 +83,14 @@ class EventsController < ApplicationController
   end
 
   def update_clicks
-    
+    @event = Event.find(params[:id])
+
+    respond_to do |format|
+      if @event && @event.update_attribute(:clicks, @event.clicks+1)
+        format.json { render json: @event }
+      else
+        format.json { render json: false }
+      end
+    end
   end
 end
