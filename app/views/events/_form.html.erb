@@ -11,6 +11,8 @@
     <%= f.input :external_link %>
     <%= f.input :source, label: 'Organization/Department' %>
     <%= f.association :creator, label_method: :username, priority: :current_user %>
+    <legend>Attach Event Picture here</legend>
+    <%= f.input :picture %>
   </div>
 
   <div class="form-actions">

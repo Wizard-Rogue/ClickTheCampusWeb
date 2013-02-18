@@ -1,23 +1,26 @@
 <%- model_class = Event -%>
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human %></h1>
+  <% if !@event.picture_file_name.nil? %>
+    <div><%= image_tag(@event.picture.url(:medium), :border=>0, :alt => "No Photo Supplied") %></div>
+  <% end %>
 </div>
 
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
-  <dd><%= @event.name %></dd>
+  <dd><%= @event.name %></dd><br />
   <dt><strong><%= model_class.human_attribute_name(:date) %>:</strong></dt>
-  <dd><%= @event.date %></dd>
+  <dd><%= @event.date.strftime("%b %d, %Y") %></dd><br />
   <dt><strong><%= model_class.human_attribute_name(:time) %>:</strong></dt>
-  <dd><%= @event.time %></dd>
+  <dd><%= @event.time.strftime("%l:%M %p") %></dd><br />
   <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
-  <dd><%= @event.description %></dd>
+  <dd><%= @event.description %></dd><br />
   <dt><strong><%= model_class.human_attribute_name(:external_link) %>:</strong></dt>
-  <dd><%= @event.external_link %></dd>
+  <dd><%= link_to @event.external_link, url_with_protocol(@event.external_link), :target => '_blank' %></dd><br />
   <dt><strong><%= model_class.human_attribute_name(:creator) %>:</strong></dt>
-  <dd><%= @event.creator.username %></dd>
+  <dd><%= @event.creator.username %></dd><br />
   <dt><strong><%= model_class.human_attribute_name(:source) %>:</strong></dt>
-  <dd><%= @event.source %></dd>
+  <dd><%= @event.source %></dd><br />
 </dl>
 
 <div class="form-actions">

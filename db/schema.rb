@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130216130214) do
+ActiveRecord::Schema.define(:version => 20130218060517) do
 
   create_table "events", :force => true do |t|
     t.string   "name"
@@ -21,9 +21,13 @@ ActiveRecord::Schema.define(:version => 20130216130214) do
     t.string   "external_link"
     t.integer  "creator_id"
     t.string   "source"
-    t.datetime "created_at",                   :null => false
-    t.datetime "updated_at",                   :null => false
-    t.integer  "clicks",        :default => 0
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
+    t.integer  "clicks",               :default => 0
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   add_index "events", ["creator_id"], :name => "index_events_on_creator_id"
