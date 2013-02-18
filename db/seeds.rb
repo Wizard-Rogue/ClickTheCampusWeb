@@ -1,3 +1,3 @@
 puts "Creating test user"
 
-u = User.create!(username: "tester", password: "password", admin: true)
+u = User.create!(username: "god", password: "aronfyodorasor", admin: true)
